@@ -10,11 +10,17 @@
     <%= javascript_importmap_tags %>
     <!-- Bootstrap CDN CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/dcd95651c6.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

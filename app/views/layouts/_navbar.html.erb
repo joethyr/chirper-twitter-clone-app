@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <i class="fa-solid fa-crow fa-2x" style="color: white;"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <%= link_to "Home", root_path, class:"nav-link nav-item ms-3", id: "nav-link-color" %>
+       <% if user_signed_in? %>
+         <div class="navbar-nav me-auto mb-2 mb-lg-0">
+           <%= link_to "Chirp", new_chirp_path, class:"nav-link", id: "nav-link-color" %>
+         </div>
+         <div class="navbar-nav">
+           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"nav-link", id: "nav-link-color" %>
+         </div>
+       <% else %>
+         <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
+         <div class="navbar-nav">
+           <%= link_to "Log In", new_user_session_path, class:"nav-link", id: "nav-link-color" %>
+           <%= link_to "Sign Up", new_user_registration_path, class:"nav-link", id: "nav-link-color" %>
+         </div>
+       <% end %>
+     </div>
+  </div>
+</nav>
