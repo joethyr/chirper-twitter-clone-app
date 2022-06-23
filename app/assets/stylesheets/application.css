@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+html body {
+  background-color: #F5F8FA;
+}
 
 .navbar {
      background-image: linear-gradient(#54B4EB, #2FA4E7 60%, #1D9CE5);
@@ -20,4 +23,9 @@
 
 #nav-link-color {
   color: white;
+}
+
+body{
+    margin-top:20px;
+    background:#eee;
 }
