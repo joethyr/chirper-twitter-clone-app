@@ -1,0 +1,22 @@
+<%= form_with(model: chirp) do |form| %>
+  <% if chirp.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(chirp.errors.count, "error") %> prohibited this chirp from being saved:</h2>
+
+      <ul>
+        <% chirp.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :chirp, style: "display: block" %>
+    <%= form.text_area :chirp %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
