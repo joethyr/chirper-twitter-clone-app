@@ -1,7 +1,21 @@
-<div id="<%= dom_id chirp %>">
-  <p>
-    <strong>Chirp:</strong>
-    <%= chirp.chirp %>
-  </p>
+<div class="card">
+    <div class="d-flex card-body">
+        <div class="flex-shrink-0">
+            <%= image_tag("avatar_placeholder.png", width: 50, class: "rounded-circle") %>
+        </div>
+        <div class="flex-grow-1 ms-3">
+            <h5>Sean Jared <small class="text-muted"><i>Posted on January 10, 2021</i></small></h5>
+            <%= chirp.chirp %>
+        </div>
+    </div>
+  <div class="">
+<%= link_to edit_chirp_path(chirp), class: "" do %>
+  <span class="icon"><i class="fa-solid fa-pen-to-square fa-lg p-2"  style="color: gray;" aria-hidden="true"></i></span>
+<% end %>
+<%= link_to chirp, method: :delete do %>
+        <span class="icon"><i class="fa fa-trash-o fa-lg p-2" style="color: gray;" aria-hidden="true"></i></span>
+<% end %>
 
+  </div>
 </div>
+

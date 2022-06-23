@@ -1,14 +1,13 @@
-<h1 class="text-center mb-4">Chirp Feed</h1>
-
-<%= render 'chirps/feed' %>
-
-<div id="chirps">
-  <% @chirps.each do |chirp| %>
-    <%= render chirp %>
-    <p>
-      <%= link_to "Show this chirp", chirp %>
-    </p>
-  <% end %>
+<div class="row">
+  <!-- left row -->
+ <%= render 'chirps/profile' %>
+  <!-- middle row -->
+  <%= render 'chirps/feed' %>
+  <!-- right row -->
+  <%= render 'chirps/follow' %>
 </div>
 
+
+
 <%= link_to "New chirp", new_chirp_path %>
+

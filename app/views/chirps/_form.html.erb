@@ -11,9 +11,8 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :chirp, style: "display: block" %>
-    <%= form.text_area :chirp %>
+  <div class="col-6 form-group">
+    <%= form.text_area :chirp, class: "form-control", placeholder: "What's happening?", rows: 3%>
   </div>
 
   <div>
