@@ -1,24 +1,49 @@
-# README
+# Chirper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## An app inspired by Twitter built with Ruby on Rails
 
-Things you may want to cover:
+Check the Gemfile for dependencies.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To get the app working , be sure to install all dependencies.
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+Create database and migrate schema:
 
-* Database initialization
+```
+rails db:create
+rails db:migrate
+```
 
-* How to run the test suite
+Be sure to load the data into the database using:
+```
+rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Now run the application:
 
-* Deployment instructions
+```
+rails s
+```
 
-* ...
+### Ruby Version
+
+* Rails 7 requires Ruby 2.7.0 or newer.
+
+## Help
+
+Run command to view all of the options you can pass to rails application.
+```
+rails new --help
+```
+## Links
+[Heroku App](https://vast-waters-55251.herokuapp.com/)
+
+## Web Resources
+
+* [The Odin Project](https://www.theodinproject.com/)
+* [Rails Guides](https://guides.rubyonrails.org/)
