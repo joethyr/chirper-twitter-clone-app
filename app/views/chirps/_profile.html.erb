@@ -3,19 +3,30 @@
   <div class="card mb-4">
     <div class="d-flex card-title pt-3 ps-3">
       <div class="flex-shrink-0">
-        <%= image_tag("avatar_placeholder.png", width: 60, class: "rounded-circle") %>
+        <%= gravatar_image_tag(current_user.email, size: 60, alt: current_user.name) %>
       </div>
       <div class="flex-grow-1 ms-3">
-        <h4><%= current_user.name %></h4>
+        <h5><%= current_user.name %></h5>
         <%= link_to edit_user_registration_path, class: "" do %>
       <span><i class="fa-solid fa-pen-to-square px-1"  style="color: gray;" aria-hidden="true"></i></span>
     <% end %>
         <small>@<%= current_user.username %></small>
       </div>
     </div>
-    <div class="card-body pt-1">
-      Chrip 3000
-    </div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Chirps</th>
+      <th scope="col">Followers</th>
+      <th scope="col">Following</th>
+    </tr>
+  </thead>
+    <tr>
+      <td><%= current_user.chirps.count %></td>
+      <td>798</td>
+      <td>12</td>
+    </tr>
+</table>
   </div>
   <% end %>
   <div class="card">

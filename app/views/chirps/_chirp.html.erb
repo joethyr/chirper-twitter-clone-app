@@ -1,7 +1,8 @@
 <div class="card">
     <div class="d-flex card-body">
         <div class="flex-shrink-0">
-            <%= image_tag("avatar_placeholder.png", width: 50, class: "rounded-circle") %>
+            <%= gravatar_image_tag(current_user.email, size: 15, alt: current_user.name) %>
+
         </div>
         <div class="flex-grow-1 ms-3">
             <h5><%= chirp.user.name %><small class="text-muted"><i> Posted on <%= chirp.user.updated_at.strftime("%a, %e %b %Y")
