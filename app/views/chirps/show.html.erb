@@ -1,8 +1,9 @@
 <%= render @chirp %>
 
 <div>
-  <%= link_to "Edit this chirp", edit_chirp_path(@chirp) %> |
+  <% if can? :update, @chirp %>
+    <%= link_to "Edit this chirp", edit_chirp_path(@chirp) %>
+    <%= button_to "Destroy this chirp", @chirp, method: :delete %>
+  <% end %>
   <%= link_to "Back to chirps", chirps_path %>
-
-  <%= button_to "Destroy this chirp", @chirp, method: :delete %>
 </div>

@@ -6,18 +6,20 @@
         </div>
         <div class="flex-grow-1 ms-3">
             <h5><%= chirp.user.name %><small class="text-muted"><i> Posted on <%= chirp.user.updated_at.strftime("%a, %e %b %Y")
- %></i></small></h5>
-            <%= chirp.chirp %>
-        </div>
+        %></i></small></h5>
+        <%= chirp.chirp %>
     </div>
-  <div>
-<%= link_to edit_chirp_path(chirp), class: "" do %>
-  <span class="icon"><i class="fa-solid fa-pen-to-square fa-lg p-2"  style="color: gray;" aria-hidden="true"></i></span>
-<% end %>
-<%= link_to chirp, method: :delete do %>
-        <span class="icon"><i class="fa fa-trash-o fa-lg p-2" style="color: gray;" aria-hidden="true"></i></span>
-<% end %>
+</div>
+<div>
+    <% if can? :update, chirp %>
+        <%= link_to edit_chirp_path(chirp), class: "" do %>
+        <span class="icon"><i class="fa-solid fa-pen-to-square fa-lg p-2"  style="color: gray;" aria-hidden="true"></i></span>
+        <% end %>
+    <%= link_to chirp, method: :delete do %>
+    <span class="icon"><i class="fa fa-trash-o fa-lg p-2" style="color: gray;" aria-hidden="true"></i></span>
+    <% end %>
+    <% end %>
 
-  </div>
+</div>
 </div>
 
