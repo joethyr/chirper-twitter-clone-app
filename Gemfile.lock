@@ -144,6 +144,7 @@ GEM
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.1)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -245,12 +246,13 @@ DEPENDENCIES
   gravatar_image_tag
   importmap-rails
   jbuilder
+  pg
   puma (~> 5.0)
   rails (~> 7.0.3)
   selenium-webdriver
   simple_form
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   turbo-rails
   tzinfo-data
