@@ -24,6 +24,7 @@ class ChirpsController < ApplicationController
   # POST /chirps or /chirps.json
   def create
     @chirp = current_user.chirps.build(chirp_params)
+    @chirp.user_id = current_user.id
 
     respond_to do |format|
       if @chirp.save
