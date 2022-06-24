@@ -1,7 +1,9 @@
   <!-- middle row -->
   <div class="col-6">
-    <%= render "form", chirp: @chirp %>
-    <hr>
+    <% if user_signed_in? %>
+      <%= render "form", chirp: @chirp %>
+      <hr>
+    <% end %>
     <div id="chirps">
       <% @chirps.each do |chirp| %>
       <%= render chirp %>
