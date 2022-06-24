@@ -1,9 +1,6 @@
   <!-- middle row -->
   <div class="col-6">
-    <div class="form-group">
-      <textarea class="form-control" placeholder="What's happening?" rows="3"></textarea>
-    </div>
-    <button>Chirp</button>
+    <%= render "form", chirp: @chirp %>
     <hr>
     <div id="chirps">
       <% @chirps.each do |chirp| %>

@@ -1,9 +1,11 @@
 class ChirpsController < ApplicationController
   before_action :set_chirp, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index]
 
   # GET /chirps or /chirps.json
   def index
     @chirps = Chirp.all.order("created_at DESC")
+    @chirp = Chirp.new
   end
 
   # GET /chirps/1 or /chirps/1.json
@@ -25,7 +27,7 @@ class ChirpsController < ApplicationController
 
     respond_to do |format|
       if @chirp.save
-        format.html { redirect_to chirp_url(@chirp), notice: "Chirp was successfully created." }
+        format.html { redirect_to root_path, notice: "Chirp was successfully created." }
         format.json { render :show, status: :created, location: @chirp }
       else
         format.html { render :new, status: :unprocessable_entity }
