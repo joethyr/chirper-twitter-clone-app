@@ -41,7 +41,7 @@ Run command to view all of the options you can pass to rails application.
 rails new --help
 ```
 ## Links
-[Heroku App](https://vast-waters-55251.herokuapp.com/)
+[Heroku App](https://thawing-forest-89542.herokuapp.com/)
 
 ## Web Resources
 
