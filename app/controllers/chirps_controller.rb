@@ -14,7 +14,7 @@ class ChirpsController < ApplicationController
 
   # GET /chirps/new
   def new
-    @chirp = Chirp.new
+    @chirp = current_user.chirps.build
   end
 
   # GET /chirps/1/edit
@@ -23,7 +23,7 @@ class ChirpsController < ApplicationController
 
   # POST /chirps or /chirps.json
   def create
-    @chirp = Chirp.new(chirp_params)
+    @chirp = current_user.chirps.build(chirp_params)
 
     respond_to do |format|
       if @chirp.save
