@@ -5,7 +5,7 @@
 
         </div>
         <div class="flex-grow-1 ms-3">
-            <h5><%= chirp.user.name %><small class="text-muted"><i> Posted on <%= chirp.user.updated_at.strftime("%a, %e %b %Y")
+            <h5><%= chirp.user.name %><small class="text-muted"><i> Posted on <%= chirp.updated_at.strftime("%a, %e %b %Y")
         %></i></small></h5>
         <%= chirp.chirp %>
     </div>
